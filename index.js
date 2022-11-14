@@ -14,8 +14,9 @@ import {
     Dimensions,
     Text,
     TouchableWithoutFeedback,
-    ViewPropTypes as RNViewPropTypes,
 } from 'react-native'
+
+import { ViewPropTypes as RNViewPropTypes } from 'deprecated-react-native-prop-types';
 
 import PropTypes from 'prop-types';
 const ViewPropTypes = RNViewPropTypes || View.propTypes;
@@ -153,7 +154,7 @@ Toast.propTypes = {
         'center',
         'bottom',
     ]),
-    textStyle: Text.propTypes.style,
+    textStyle: PropTypes.any,
     positionValue:PropTypes.number,
     fadeInDuration:PropTypes.number,
     fadeOutDuration:PropTypes.number,
